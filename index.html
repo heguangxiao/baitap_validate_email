@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function kiemTraEmail(email) {
+            regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(.[A-Za-z0-9]+)$/;
+            if (regexp.test(email)){
+                return true;
+            }
+            return false;
+        }
+
+        let email = 'a@gmail.com';
+        document.writeln(kiemTraEmail(email)+'<br/>');
+        email = 'ab@yahoo.com';
+        document.writeln(kiemTraEmail(email)+'<br/>');
+        email = 'abc@hotmail.com';
+        document.writeln(kiemTraEmail(email)+'<br/>');
+        email = '@gmail.com';
+        document.writeln(kiemTraEmail(email)+'<br/>');
+        email = 'ab@gmail.';
+        document.writeln(kiemTraEmail(email)+'<br/>');
+        email = '@#abc@gmail.com';
+        document.writeln(kiemTraEmail(email)+'<br/>');
+    </script>
+</body>
+</html>
